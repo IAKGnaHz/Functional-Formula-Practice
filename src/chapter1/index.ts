@@ -6,7 +6,7 @@
  * @param arr 数组
  * @returns 平均值
  */
-const calculateAverageOfEvenNumbers = (arr: number[]): number => {
+export const calculateAverageOfEvenNumbers = (arr: number[]): number => {
     const evenNumbers = arr.filter(num => num % 2 === 0);
     const sum = evenNumbers.reduce((acc, curr) => acc + curr, 0);
     const average = sum / evenNumbers.length;
@@ -14,7 +14,7 @@ const calculateAverageOfEvenNumbers = (arr: number[]): number => {
 };
 
 // 调用示例
-const arr = [1, 2, 3, 4, 5, 6];
+export const arr = [1, 2, 3, 4, 5, 6];
 const average = calculateAverageOfEvenNumbers(arr);
 console.log(average);
 
@@ -26,7 +26,7 @@ console.log(average);
  * @param arr 字符串数组
  * @returns 长度之和
  */
-const calculateSumOfStringLengths = (arr: string[]): number => {
+export const calculateSumOfStringLengths = (arr: string[]): number => {
     const lengths = arr.map(str => str.length);
     const sum = lengths.reduce((acc, curr) => acc + curr, 0);
     return sum;
